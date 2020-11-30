@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FreeCodeCamp Survey form</title>
+  
+</head>
+<body>
+  <h1 id="title">FreeCodeCamp Survey form</h1>
+  <p id="description">Please, fill out the following form</p>
+  <form action="" id="survey-form">
+    <label for="name" id="name-label">Name:</label>
+    <input required type="text" id="name" placeholder="Enter your name"><br><br>
+    <label for="email" id="email-label">Email:</label>
+    <input required type="email" id="email" placeholder="Enter your email"><br><br>
+    <label for="number" id="number-label">Number:</label>
+    <input type="number" id="number" min="0" max="100" placeholder="0-100"><br><br>
+    <select name="device" id="dropdown">
+      <option value="" disabled selected>Select your device</option>
+      <option value="phone">Phone</option>
+      <option value="desktop">Desktop</option>
+      <option value="">Laptop</option>
+    </select><br><br>
+    <p>Do you find this exercise boring? <br>
+      <input type="radio" name="opinion" value="yes">Yes
+      <input type="radio" name="opinion" value="no">No
+      <input type="radio" name="opinion" value="unsure">Not sure
+    </p>
+    <p>What is your preferred learning source (Check all that apply)<br>
+      <input type="checkbox" value="Books">Books<br>
+      <input type="checkbox" value="YouTube">YouTube tutorials<br>
+      <input type="checkbox" value="teacher">Individual Mentor<br>
+      <input type="checkbox" value="classes">Classes<br>
+    </p>
+    <br>
+    <textarea placeholder="Comments and suggestions"></textarea><br><br>
+    <input type="submit" id="submit" name="submit">
+    
+    
+  </form>
+</body>
+</html>
