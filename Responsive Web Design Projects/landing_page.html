@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background-color: grey;
+            overflow: hidden;
+        }
+        
+        nav a {
+            float: left;
+            display: block;
+            padding: 1em;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .main {
+            margin-top: 80px;
+        }
+
+        header, article, footer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 400px) {
+            header, article, footer {
+            display: flex;
+            flex-direction: column;
+            }
+           .main {
+               margin-top: 150px;
+           }
+        }
+      
+        #header-img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 10px;
+        }
+
+        .text {
+            width: 350px;
+        }
+                      
+    </style>
+</head>
+<body>
+    <header id="header">
+        <img src="logo.jpg" alt="logo image" id="header-img">
+        <nav id="nav-bar">
+            <a href="#video" class="nav-link">Video</a>
+            <a href="#read" class="nav-link">Read</a>
+            <a href="#footer" class="nav-link">Footer</a>
+        </nav>
+    </header>
+    <article class="main">
+        <div class="text">
+            <h1>
+                Memoria reminds
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi saepe, explicabo nemo quos optio eaque harum natus, ab tempora, quidem nostrum. Quae error optio quas voluptatum nulla inventore, magni exercitationem.
+            </p>
+        </div>
+        <iframe id="video" src="https://www.youtube.com/embed/9PGeNOzu-us" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+        <section id="read">
+            <h2>
+                Paragraph 1
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus blanditiis aliquam voluptatem distinctio enim modi exercitationem dolorem similique nisi dolores dolore, eos reiciendis delectus ducimus magnam voluptas, dolor ratione deserunt officia. Repudiandae, dolores! Ratione dicta veritatis nisi soluta non doloribus. Nobis culpa deleniti facere esse, nesciunt suscipit similique quis earum.
+            </p>
+        </section>
+        <section>
+            <h2>
+                Paragraph 2
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur at eaque illum eligendi modi qui fuga dolor fugit, ab perspiciatis quo vero accusamus ipsum sapiente reiciendis nostrum doloremque quas perferendis?
+            </p>
+        </section>
+        <section>
+            <h2>
+                Paragraph 3
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, cumque assumenda aspernatur corrupti, ipsa quod vero, fugit ullam quasi id quas molestias consectetur non? Quidem, placeat pariatur? Non, expedita! Explicabo debitis adipisci, a nesciunt sit neque tempora laudantium beatae ex.
+            </p>
+        </section>
+    </article>
+    <footer id="footer">
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input type="email" name="email" id="email" placeholder="enter your email here">
+            <input type="submit" id="submit">
+    
+        </form>
+    </footer>
+   
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
