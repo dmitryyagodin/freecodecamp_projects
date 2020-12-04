@@ -4,15 +4,14 @@ function convertToRoman(num) {
   }
 
   let arr = Array.from(String(num), Number); // create an array from an integer
-  let multiplier = 1;
+  let multiplier = 1; // will multiply array elements by 1, 10, 100 or 1000 
   for (let i = arr.length - 1; i >= 0; i--) {
     arr[i] *= multiplier;
     multiplier *= 10;
     arr[i] = presets[arr[i]];
-    console.log(arr);
   }
   
-  return arr.join("");
+  return arr.join(""); // return the array elements as a string with no spaces between
 }
 
 console.log(convertToRoman(1023));
