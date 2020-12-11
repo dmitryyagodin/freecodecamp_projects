@@ -40,10 +40,10 @@ function lookUpProfile(name, prop) {
   return "No such contact";
 }
 
-// console.log(lookUpProfile("Akira", "likes")); // =>
+console.log(lookUpProfile("Akira", "likes")); // => ["Pizza", "Coding", "Brownie Points"]
 console.log(lookUpProfile("Kristian", "lastName")); // => "Vos"
 console.log(lookUpProfile("Sherlock", "likes")); // => ["Intriguing Cases", "Violin"]
-// console.log(lookUpProfile("Harry", "likes")); // => array
-// console.log(lookUpProfile("Bob", "number")); // => "No such contact"
-// console.log(lookUpProfile("Bob", "potato")); // => "No such contact"
-// console.log(lookUpProfile("Akira", "address")); // => "No such property"
+console.log(lookUpProfile("Harry", "likes")); // => array
+console.log(lookUpProfile("Bob", "number")); // => "No such contact"
+console.log(lookUpProfile("Bob", "potato")); // => "No such contact"
+console.log(lookUpProfile("Akira", "address")); // => "No such property"
