@@ -13,6 +13,9 @@ _______________________________________________________________________________
 - [Recursion to Create a Range of Numbers](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-recursion-to-create-a-range-of-numbers) (rangeOfNumbers.js)
 
 2.2. [The Intermediate Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/)
+- Pig Latin
+> "If a word begins with a consonant, take the first consonant or consonant cluster, move it to the end of the word, and add "ay" to it. If a word begins with a vowel, just add "way" at the end."
+- What is in a name (Wherefore art thou)
 - Sum All Numbers in a Range
 
 2.3. [Final projects](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/javascript-algorithms-and-data-structures-projects/)
