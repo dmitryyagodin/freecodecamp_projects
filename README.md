@@ -13,7 +13,13 @@ _______________________________________________________________________________
 - [Recursion to Create a Range of Numbers](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-recursion-to-create-a-range-of-numbers) (rangeOfNumbers.js)
 
 2.2. [The Intermediate Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/)
-- Pig Latin
+- [Missing letters](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/missing-letters) (30.12.2020)
+> Find the missing letter in the passed letter range and return it. If all letters are present in the range, return undefined.
+- [DNA Pairing](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/dna-pairing) (30.12.2020)
+> The DNA strand is missing the pairing element. Take each character, get its pair, and return the results as a 2d array.
+- Search and Replace (30.12.2020)
+> Perform a search and replace on the sentence using the arguments provided and return the new sentence.
+- Pig Latin (29.12.2020)
 > "If a word begins with a consonant, take the first consonant or consonant cluster, move it to the end of the word, and add "ay" to it. If a word begins with a vowel, just add "way" at the end."
 - What is in a name (Wherefore art thou)
 - Sum All Numbers in a Range
