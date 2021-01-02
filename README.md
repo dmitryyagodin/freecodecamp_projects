@@ -13,6 +13,9 @@ _______________________________________________________________________________
 - [Recursion to Create a Range of Numbers](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/use-recursion-to-create-a-range-of-numbers) (rangeOfNumbers.js)
 
 2.2. [The Intermediate Algorithm Scripting](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/)
+- [Convert HTML entities](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/convert-html-entities) (02.01.2021)
+- [Sorted Union](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/sorted-union) (30.12.2020)
+> Write a function that takes two or more arrays and returns a new array of unique values in the order of the original provided arrays.
 - [Missing letters](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/missing-letters) (30.12.2020)
 > Find the missing letter in the passed letter range and return it. If all letters are present in the range, return undefined.
 - [DNA Pairing](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/dna-pairing) (30.12.2020)
