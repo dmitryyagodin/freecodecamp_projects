@@ -1,3 +1,93 @@
+# This repo is for my React learning with FreeCodeCamp
+
+<img scr="/img/typesOfFood.PNG">
+
+
+```javascript
+import Fruits from './Fruits';
+import Vegetables from './Vegetables';
+
+function Types_of_Food() {
+  return (
+    <div>
+      <h1>Types of Food:</h1>
+      <Fruits />
+      <Vegetables />
+    </div>
+  );
+}
+
+export default Types_of_Food;
+```
+## Use Default PropsPassed
+```javascript
+const ShoppingCart = (props) => {
+  return (
+    <div>
+      <h1>Shopping Cart Component</h1>
+    </div>
+  )
+};
+// sets the default value of items in ShoppingCart to zero
+ShoppingCart.defaultProps = {
+  items: 0
+}
+```
+## Override Default PropsPassed
+```javascript
+class ShoppingCart extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    // setting quantity equal to 10 here overrides the default props from the previous example
+    return <Items quantity={10} />
+  }
+};
+```
+
+## Use PropTypes to Define the Props You Expect
+```javascript
+import PropTypes from 'prop-types';
+// checks that the type of props in Items is present and is a number 
+Items.propTypes = {
+  quantity: PropTypes.number.isRequired
+};
+```
+## Access Props Using this.props
+```javascript
+class ReturnTempPassword extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+  render() {
+    return (
+        <div>
+            // to access props within class component use this.props. 
+            <p>Your password is: {this.props.tempPassword}</p>
+        </div>
+    );
+  }
+};
+
+class ResetPassword extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+  render() {
+    return (
+        <div>
+          <h2>Reset Password</h2>
+          // tempPassword will be accessed in the child component above
+          <ReturnTempPassword tempPassword="asdfweodo"/>
+          </div>
+    );
+  }
+};
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
