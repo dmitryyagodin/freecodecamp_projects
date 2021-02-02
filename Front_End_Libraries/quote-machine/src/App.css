@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+#social-div {
+  width: 90px;
+  display: flex;
+  margin: 30px auto 0 auto;
+  justify-content: space-between;
+}
+
+#text {
+  max-width: 400px;
+  font-style: italic;
+}
+
+#author {
+  max-width: 400px;
+  text-align: right;
+  font-size: 0.7em;
+}
