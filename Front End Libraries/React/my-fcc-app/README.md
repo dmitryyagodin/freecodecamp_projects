@@ -19,7 +19,51 @@ function Types_of_Food() {
 
 export default Types_of_Food;
 ```
-## Use Default PropsPassed
+
+## Render State in the User Interface
+There are two ways for doing that: inside the return statement or before it in the render method
+
+```javascript
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { // including this.state object in the constructor method makes the component stateful
+      name: 'freeCodeCamp'
+    }
+  }
+  render() {
+    return (
+      <div>
+        <h1>{this.state.name}</h1>  <!-- renders "freeCodeCamp" inside h1 -->
+      </div>
+    );
+  }
+};
+/* here is the alternative way that allows longer manipulations with data before returning it 
+  render() {
+      const name = this.state.name;
+      return (
+        <div>
+          <h1>{name}</h1>
+        </div>
+      );
+    } */
+```
+
+
+
+## Define an HTML Class in JSX
+```javascript
+const JSX = (
+  // instead of "class" use "className" to define classes for elements in JSX's 
+  <div className="myDiv">
+    <h1>Add a class to this div</h1>
+  </div>
+);
+
+```
+
+## Use Default Props Passed
 ```javascript
 const ShoppingCart = (props) => {
   return (
@@ -28,6 +72,7 @@ const ShoppingCart = (props) => {
     </div>
   )
 };
+
 // sets the default value of items in ShoppingCart to zero
 ShoppingCart.defaultProps = {
   items: 0
@@ -63,8 +108,9 @@ class ReturnTempPassword extends React.Component {
   }
   render() {
     return (
+      // while in stateless functional components to access props you'd use {props.tempPassword},
+      // to access props within the (stateful?) class component use "this.props.<..>"
         <div>
-            // to access props within class component use this.props. 
             <p>Your password is: {this.props.tempPassword}</p>
         </div>
     );
@@ -78,9 +124,9 @@ class ResetPassword extends React.Component {
   }
   render() {
     return (
+      // tempPassword will be passed to the child component above
         <div>
           <h2>Reset Password</h2>
-          // tempPassword will be accessed in the child component above
           <ReturnTempPassword tempPassword="asdfweodo"/>
           </div>
     );
