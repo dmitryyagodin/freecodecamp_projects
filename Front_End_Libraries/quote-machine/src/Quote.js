@@ -1,6 +1,7 @@
 import React from 'react';
 import quotesData from './quotesData';
-
+import Button from 'react-bootstrap/Button';
+import { ArrowRight } from 'react-bootstrap-icons';
 
 class Quote extends React.Component {
   constructor(props) {
@@ -20,13 +21,13 @@ class Quote extends React.Component {
 
   render() {
     return (
-      <div id="#quote-box">
-        <p id="text">{quotesData[this.state.number].quote}</p>
+      <div id="quote-box">
+        <p id="text"><span>"</span>{quotesData[this.state.number].quote}<span>"</span></p>
         <p id="author">{quotesData[this.state.number].author}</p>
-        <button id="new-quote" onClick={this.handleClick}>New quote</button>
-        <button id="tweet-quote">
-          <a href="#">Tweet</a>
-        </button>
+        <Button id="new-quote" onClick={this.handleClick} variant="outline-primary">New quote</Button>
+        <Button>
+          <a id="tweet-quote" href="twitter.com/intent/tweet"><i className="bi bi-twitter"></i></a>
+        </Button>
       </div>
     );
   }
