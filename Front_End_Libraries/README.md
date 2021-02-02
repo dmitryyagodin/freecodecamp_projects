@@ -1,24 +1,5 @@
 # This repo is for my React learning with FreeCodeCamp
 
-<img scr="/img/typesOfFood.PNG">
-
-
-```javascript
-import Fruits from './Fruits';
-import Vegetables from './Vegetables';
-
-function Types_of_Food() {
-  return (
-    <div>
-      <h1>Types of Food:</h1>
-      <Fruits />
-      <Vegetables />
-    </div>
-  );
-}
-
-export default Types_of_Food;
-```
 
 ## Render State in the User Interface
 There are two ways for doing that: inside the return statement or before it in the render method
