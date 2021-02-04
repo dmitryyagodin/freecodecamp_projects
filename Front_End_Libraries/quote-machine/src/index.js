@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './App.css';
 import './index.css';
-import App from './App';
+import Quote from './Quote';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div className="App">
+      <header className="App-header">
+        <Quote />
+      </header>
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
