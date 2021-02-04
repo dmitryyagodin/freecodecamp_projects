@@ -1,4 +1,95 @@
-# This repo is for my React learning with FreeCodeCamp
+# React
+
+## This repo documents some of the FreeCodeCamp's React assignments
+
+### [React: Write a Simple Counter](https://www.freecodecamp.org/learn/front-end-libraries/react/write-a-simple-counter) 04-Feb-2021
+
+Here is an example of stateful component that does the following:
+- initializes state
+- defines methods that set state
+- assigns click handlers to trigger these methods
+
+Try it on [CodePen](https://codepen.io/yagodim/full/MWbaRxM)
+
+```javascript
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+    // these 3 binds connect the below methods to the particular instance of the component 
+    this.increment = this.increment.bind(this);
+    this.decrement = this.decrement.bind(this);
+    this.reset = this.reset.bind(this);
+  }
+  // the three methods below change the state according to their names
+  increment() {
+    this.setState(state => ({
+      count: state.count + 1
+    }));
+  }
+  decrement() {
+    this.setState(state => ({
+      count: state.count - 1
+    }));
+  } 
+  reset() {
+    this.setState({
+      count: 0
+    });
+  }
+  // display 3 counting buttons and the current count result
+  render() {
+    return (
+      <div>
+        <button className='inc' onClick={this.increment}>Increment!</button>
+        <button className='dec' onClick={this.decrement}>Decrement!</button>
+        <button className='reset' onClick={this.reset}>Reset</button>
+        <h1>Current Count: {this.state.count}</h1>
+      </div>
+    );
+  }
+};
+```
+## [React: Use State to Toggle an Element](https://www.freecodecamp.org/learn/front-end-libraries/react/use-state-to-toggle-an-element) 04-Feb-2021
+
+The rendering depends on the current state of the component. The `toggleVisibility()` method changes the visibility property with each button click.
+
+```javascript
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      visibility: false
+    };
+    this.toggleVisibility = this.toggleVisibility.bind(this);
+  }
+  // toggles the boolean value of visibility 
+  toggleVisibility() {
+    this.setState(currentState => ({
+      visibility: !currentState.visibility
+      }));
+  }
+
+  render() {
+    if (this.state.visibility) {
+      return (
+        <div>
+          <button onClick={this.toggleVisibility}>Click Me</button>
+          <h1>Now you see me!</h1> <!-- if visibility is true the button displays this h1 -->
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <button onClick={this.toggleVisibility}>Click Me</button>
+        </div>
+      );
+    }
+  }
+}
+```
 
 ## Set State with *this.setState* and bind 'this' to a Class Method
 ```javascript
