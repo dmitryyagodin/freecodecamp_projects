@@ -2,6 +2,107 @@
 
 ## This repo documents some of the FreeCodeCamp's React assignments
 
+## [React: Use Array.filter() to Dynamically Filter an Array](https://www.freecodecamp.org/learn/front-end-libraries/react/use-array-filter-to-dynamically-filter-an-array)
+
+05-Feb-2021 
+
+```javascript
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      users: [
+        {
+          username: 'Jeff',
+          online: true
+        },
+        {
+          username: 'Alan',
+          online: false
+        },
+        {
+          username: 'Mary',
+          online: true
+        },
+        {
+          username: 'Jim',
+          online: false
+        },
+        {
+          username: 'Sara',
+          online: true
+        },
+        {
+          username: 'Laura',
+          online: true
+        }
+      ]
+    };
+  }
+  render() {
+    // get only those users who are online
+    const usersOnline = this.state.users.filter(user => user.online);
+    // form list items for each of the online users' usernames
+    const renderOnline = usersOnline.map((user) => <li key={user.username}>{user.username}</li>);
+    return (
+      <div>
+        <h1>Current Online Users:</h1>
+        <ul>{renderOnline}</ul>
+      </div>
+    );
+  }
+}
+```
+
+## [React: Use Array.map() to Dynamically Render Elements](https://www.freecodecamp.org/learn/front-end-libraries/react/use-array-map-to-dynamically-render-elements)
+
+05-Feb-2021
+
+Try in on [CodePen](https://codepen.io/yagodim/pen/NWbxZRP)
+
+```javascript
+class MyToDoList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userInput: '',
+      toDoList: []
+    }
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleSubmit() {
+    const itemsArray = this.state.userInput.split(',');
+    this.setState({
+      toDoList: itemsArray
+    });
+  }
+  handleChange(e) {
+    this.setState({
+      userInput: e.target.value
+    });
+  }
+  render() {
+    const items = this.state.toDoList.map(i => <li>{i}</li>);
+    return (
+      <div>
+        <textarea
+          onChange={this.handleChange}
+          value={this.state.userInput}
+          style={textAreaStyles}
+          placeholder='Separate Items With Commas'
+        />
+        <br />
+        <button onClick={this.handleSubmit}>Create List</button>
+        <h1>My "To Do" List:</h1>
+        <ul>{items}</ul>
+      </div>
+    );
+  }
+}
+
+```
+
 ## [React: Render Conditionally from Props](https://www.freecodecamp.org/learn/front-end-libraries/react/render-conditionally-from-props)
 
 05-Feb-2021
