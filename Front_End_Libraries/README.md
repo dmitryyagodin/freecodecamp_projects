@@ -2,6 +2,150 @@
 
 ## This repo documents some of the FreeCodeCamp's React assignments
 
+## [React: Use a Ternary Expression for Conditional Rendering](https://www.freecodecamp.org/learn/front-end-libraries/react/use-a-ternary-expression-for-conditional-rendering)
+
+05-Feb-2021
+
+Try it on [CodePen](https://codepen.io/yagodim/pen/xxRZzqR)
+
+```javascript
+const inputStyle = {
+  width: 235,
+  margin: 5
+};
+
+class CheckUserAge extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      input: '',
+      userAge: ''
+    }
+    this.submit = this.submit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(e) {
+    this.setState({
+      input: e.target.value,
+      userAge: ''
+    });
+  }
+  submit() {
+    this.setState(state => ({
+      userAge: state.input
+    }));
+  }
+  render() {
+    const buttonOne = <button onClick={this.submit}>Submit</button>;
+    const buttonTwo = <button>You May Enter</button>;
+    const buttonThree = <button>You Shall Not Pass</button>;
+    return (
+      <div>
+        <h3>Enter Your Age to Continue</h3>
+        <input
+          style={inputStyle}
+          type='number'
+          value={this.state.input}
+          onChange={this.handleChange}
+        />
+        <br />
+        <!-- if no age entered - render btn 1, 
+                  else check if age < 18 -> btn 3
+                  else -> btn 2   -->
+        {!this.state.userAge ? buttonOne : this.state.input < 18 ? buttonThree : buttonTwo}
+        </div>
+    );
+  }
+}
+
+ReactDOM.render(<CheckUserAge />, document.getElementById('root'));
+
+```
+
+## [React: Use && for a More Concise Conditional](https://www.freecodecamp.org/learn/front-end-libraries/react/use--for-a-more-concise-conditional)
+
+05-Feb-2021
+
+If else statements can be placed inside *render()* to fork the resulting rendering. But a more consice way is the following:
+
+>`{condition && <p>markup</p>}` If the condition is true, the markup will be returned. If the condition is false, the operation will immediately return false after evaluating the condition and return nothing. 
+
+```javascript
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      display: true
+    }
+    this.toggleDisplay = this.toggleDisplay.bind(this);
+  }
+  toggleDisplay() {
+    this.setState(state => ({
+      display: !state.display
+    }));
+  }
+  render() {
+    return (
+       <div>
+         <button onClick={this.toggleDisplay}>Toggle Display</button>
+          <!-- h1 is rendered only if the state is true -->
+         {this.state.display && <h1>Displayed!</h1>}
+       </div>
+    );
+  }
+};
+```
+
+
+## [React: Optimize Re-Renders with shouldComponentUpdate](https://www.freecodecamp.org/learn/front-end-libraries/react/optimize-re-renders-with-shouldcomponentupdate)
+
+05-Feb-2021
+
+```javascript
+class OnlyEvens extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  // check if the new props require re-rendering
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('Should I update?');
+    // this method only re-renders the component for even values (optimized performance due to less re-rendering)
+    if (nextProps.value % 2 === 0) {
+      return true;
+    }
+  }
+  componentDidUpdate() {
+    console.log('Component re-rendered.');
+  }
+  render() {
+    return <h1>{this.props.value}</h1>;
+  }
+}
+
+class Controller extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 0
+    };
+    this.addValue = this.addValue.bind(this);
+  }
+  addValue() {
+    this.setState(state => ({
+      value: state.value + 1
+    }));
+  }
+  render() {
+    return (
+      <div>
+        <button onClick={this.addValue}>Add</button>
+        <OnlyEvens value={this.state.value} />
+      </div>
+    );
+  }
+}
+```
+
 ## [React: Add Event Listeners](https://www.freecodecamp.org/learn/front-end-libraries/react/add-event-listeners)
 
 05-Feb-2021
