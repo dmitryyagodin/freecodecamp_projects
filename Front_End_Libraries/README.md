@@ -2,6 +2,43 @@
 
 ## This repo documents some of the FreeCodeCamp's React assignments
 
+## [React: Render Conditionally from Props](https://www.freecodecamp.org/learn/front-end-libraries/react/render-conditionally-from-props)
+
+05-Feb-2021
+
+```javascript
+class Results extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  // the resulting h1 text depends on the randomly generated props value of fiftyFifty
+  render() {
+    return this.props.fiftyFifty ? <h1>"You win!"</h1> : <h1>"You Lose!"</h1>;
+  }
+}
+
+class GameOfChance extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { counter: 1 };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState({ counter: this.state.counter + 1 });
+  }
+  render() {
+    const expression = Math.random() >= .5; // randomly sets expression to either true or false
+    return (
+      <div>
+        <button onClick={this.handleClick}>Play Again</button>
+        <Results fiftyFifty={expression} />
+        <p>{'Turn: ' + this.state.counter}</p>
+      </div>
+    );
+  }
+}
+```
+
 ## [React: Use a Ternary Expression for Conditional Rendering](https://www.freecodecamp.org/learn/front-end-libraries/react/use-a-ternary-expression-for-conditional-rendering)
 
 05-Feb-2021
