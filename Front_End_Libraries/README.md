@@ -6,6 +6,15 @@
 
 05-Feb-2021 
 
+Based on a list of users and their statues dynamically render "Current online users" as an unordered list of items:
+
+Users online:
+- Jeff
+- Mary
+- Sara
+- Laura
+
+
 ```javascript
 class MyComponent extends React.Component {
   constructor(props) {
@@ -44,6 +53,8 @@ class MyComponent extends React.Component {
     const usersOnline = this.state.users.filter(user => user.online);
     // form list items for each of the online users' usernames
     const renderOnline = usersOnline.map((user) => <li key={user.username}>{user.username}</li>);
+    // the 2 lines above can be replaced with this one:
+    // const renderOnline = this.state.users.map(user => user.online && <li key={user.userame}>{user.username}</li>);
     return (
       <div>
         <h1>Current Online Users:</h1>
