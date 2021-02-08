@@ -4,14 +4,16 @@
 
 function updateInventory(arr1, arr2) {   
 
-  for (let i of arr2) {
-      if (!arr1.find(item => item[1] === i[1])) {
-          arr1.push(i);
+  for (let newItem of arr2) {
+    // if new item is not in the invetory, add it 
+      if (!arr1.find(item => item[1] === newItem[1])) {
+          arr1.push(newItem);
+    // otherwise update the inventory by adding newItem's quanity
       } else {
-          arr1.map(item => item[1] === i[1] && arr1[item[0] += i[0]])
+          arr1.map(item => item[1] === newItem[1] && arr1[item[0] += newItem[0]])
       }
   }
-
+  // return the updated inventory sorted alphabetically by item names
   return arr1.sort((a, b) => a[1] > b[1] ? 1 : -1)
 }
 var curInv = [
