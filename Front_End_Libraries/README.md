@@ -4,7 +4,9 @@
 
 ## [React: Use Array.filter() to Dynamically Filter an Array](https://www.freecodecamp.org/learn/front-end-libraries/react/use-array-filter-to-dynamically-filter-an-array)
 
-05-Feb-2021 
+05-Feb-2021
+
+Try it on [CodePen](https://codepen.io/yagodim/pen/LYbNmaV)
 
 Based on a list of users and their statues dynamically render "Current online users" as an unordered list of items:
 
