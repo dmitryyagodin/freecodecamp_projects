@@ -38,6 +38,8 @@ _______________________________________________________________________________
 ## 4. [Coding interview prep](https://www.freecodecamp.org/learn/coding-interview-prep/algorithms/)
 - Algorithms
     - [Algorithms: Find the Symmetric Difference](https://www.freecodecamp.org/learn/coding-interview-prep/algorithms/find-the-symmetric-difference) (Passed 22-Dec-2020)
+    - [Algorithms: Inventory Update](https://www.freecodecamp.org/learn/coding-interview-prep/algorithms/inventory-update) (Passed 08-Feb-2021)
+    
 - Project Euler
     - Problem 1: Multiples of 3 and 5
     - Problem 2: Even Fibonacci Numbers
